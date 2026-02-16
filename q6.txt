@@ -1,0 +1,247 @@
+DETAILED MATHEMATICAL EXPLANATION (WITH EQUATIONS)
+
+1) FROM NEWTON TO QUANTUM FIELD THEORY
+
+Classical mechanics is governed by Newton’s equation:
+
+    F = m a
+
+or equivalently,
+
+    m d^2x/dt^2 = F(x,t)
+
+Quantum mechanics replaces particle trajectories by wavefunctions ψ(x,t)
+satisfying Schrödinger’s equation:
+
+    iħ ∂ψ/∂t = Hψ
+
+Relativistic quantum field theory replaces particles by fields:
+
+    φ(x,t),  Aμ(x,t),  ψ(x,t)
+
+These satisfy field equations derived from a Lagrangian density L.
+
+--------------------------------------------------------------------
+
+2) CLASSICAL YANG–MILLS THEORY
+
+Yang–Mills theory is a non-abelian gauge theory.
+
+Let G be a compact Lie group (e.g., SU(N)).
+Let:
+
+    Aμ(x) = gauge field (Lie algebra valued)
+
+The field strength (curvature) is:
+
+    Fμν = ∂μAν − ∂νAμ + [Aμ, Aν]
+
+Compare with electromagnetism (abelian case):
+
+    Fμν = ∂μAν − ∂νAμ
+
+The extra commutator term:
+
+    [Aμ, Aν]
+
+creates nonlinear self-interactions.
+
+The Yang–Mills action is:
+
+    S = (1/4g^2) ∫ tr(Fμν F^μν) d^4x
+
+The Euler–Lagrange equations give:
+
+    Dμ F^μν = 0
+
+where:
+
+    Dμ = ∂μ + [Aμ, ·]
+
+is the covariant derivative.
+
+These are the classical Yang–Mills equations.
+
+--------------------------------------------------------------------
+
+3) GAUGE SYMMETRY
+
+Under a gauge transformation:
+
+    Aμ → g Aμ g^(−1) − (∂μ g) g^(−1)
+
+where g(x) ∈ G.
+
+Physics is invariant under such transformations.
+
+This geometric structure corresponds to:
+
+    Connections on principal G-bundles
+    Curvature = Fμν
+
+Thus Yang–Mills theory is deeply geometric.
+
+--------------------------------------------------------------------
+
+4) QUANTUM YANG–MILLS THEORY
+
+To quantize, one formally defines the path integral:
+
+    Z = ∫ exp(iS[A]/ħ) DA
+
+Observables are expectation values:
+
+    ⟨O⟩ = (1/Z) ∫ O[A] exp(iS[A]/ħ) DA
+
+In four dimensions (R^4), the goal is to define this rigorously.
+
+However:
+
+    The measure DA is not mathematically well-defined.
+    Renormalization is required.
+    Ultraviolet divergences appear.
+
+A full constructive definition is unknown.
+
+--------------------------------------------------------------------
+
+5) MASS GAP
+
+In classical Yang–Mills theory (no mass term),
+the equations are scale invariant.
+
+Classical waves travel at speed c,
+so the spectrum contains massless excitations.
+
+In quantum theory, one studies the Hamiltonian H.
+The mass m of a particle corresponds to:
+
+    H |ψ⟩ = E |ψ⟩
+    E^2 = p^2 + m^2
+
+A mass gap means:
+
+    There exists Δ > 0 such that
+    Spec(H) ⊆ {0} ∪ [Δ, ∞)
+
+That is:
+
+    The lowest nonzero energy state
+    has energy ≥ Δ.
+
+Equivalently:
+
+    No massless excitations exist.
+
+--------------------------------------------------------------------
+
+6) WHY MASS GAP IS SURPRISING
+
+The classical Lagrangian contains no mass term:
+
+    L = (1/4g^2) tr(Fμν F^μν)
+
+Yet quantum effects generate an effective mass scale.
+
+This phenomenon is called:
+
+    Dimensional transmutation.
+
+The coupling constant runs with energy:
+
+    μ dg/dμ = −β(g)
+
+For SU(N):
+
+    β(g) ≈ −(11N/48π^2) g^3 + ...
+
+Since β(g) < 0:
+
+    g(μ) → 0 as μ → ∞
+    (asymptotic freedom)
+
+At low energies, the coupling becomes strong,
+leading to confinement and a mass gap.
+
+--------------------------------------------------------------------
+
+7) CONFINEMENT AND CORRELATION FUNCTIONS
+
+The mass gap is related to decay of correlation functions.
+
+Let:
+
+    G(x) = ⟨O(x) O(0)⟩
+
+If there is a mass gap m > 0, then:
+
+    G(x) ~ e^(−m|x|)
+
+for large |x|.
+
+Exponential decay corresponds to positive mass.
+
+If no mass gap:
+
+    G(x) ~ power-law decay.
+
+Thus proving a mass gap amounts to proving
+exponential decay of correlations.
+
+--------------------------------------------------------------------
+
+8) THE MILLENNIUM PROBLEM
+
+One must prove:
+
+    For any compact simple gauge group G,
+    quantum Yang–Mills theory exists on R^4
+    and has a mass gap Δ > 0.
+
+More precisely:
+
+    Construct a quantum field theory satisfying
+    the Wightman axioms
+    and show Spec(H) has a positive gap.
+
+No complete mathematical construction exists.
+
+--------------------------------------------------------------------
+
+9) WHY THIS IS HARD
+
+Difficulties include:
+
+    - Nonlinear self-interaction: [Aμ, Aν]
+    - Renormalization in 4D
+    - Strong coupling at low energies
+    - Non-perturbative effects
+
+Perturbation theory expands:
+
+    exp(iS/ħ) = ∑ (Feynman diagrams)
+
+But this is only formal.
+
+A non-perturbative construction is required.
+
+--------------------------------------------------------------------
+
+10) CENTRAL SIGNIFICANCE
+
+Yang–Mills theory underlies:
+
+    - Quantum chromodynamics (QCD)
+    - The Standard Model of particle physics
+
+Physically:
+
+    Experiments show particles (gluons, hadrons)
+    have positive mass.
+
+Mathematically:
+
+    Prove existence of a 4D quantum Yang–Mills theory
+    with a strictly positive mass gap.
+
+That remains an open fundamental problem.

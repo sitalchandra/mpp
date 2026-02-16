@@ -1,0 +1,169 @@
+DETAILED MATHEMATICAL EXPLANATION
+
+1) MODELING THE HOUSING PROBLEM
+
+We have:
+
+    400 students
+    100 dormitory places
+    A list of incompatible pairs
+
+We must choose 100 students such that:
+
+    No selected pair appears on the Dean’s incompatibility list.
+
+This can be modeled using graph theory.
+
+Construct a graph G:
+
+    - Each student = a vertex
+    - Each incompatible pair = an edge between two vertices
+
+The problem becomes:
+
+    Does G contain an independent set of size 100?
+
+An independent set is a collection of vertices
+with no edges between them.
+
+Thus the housing problem is exactly the:
+
+    INDEPENDENT SET problem.
+
+------------------------------------------------------------
+
+2) WHY BRUTE FORCE IS IMPOSSIBLE
+
+The number of ways to choose 100 students out of 400 is:
+
+    C(400, 100) = 400! / (100! 300!)
+
+This number is astronomically large.
+
+In fact,
+
+    C(400, 100) ≈ 10^96
+
+This exceeds the estimated number of atoms
+in the observable universe (~10^80).
+
+So checking all possibilities is computationally impossible.
+
+------------------------------------------------------------
+
+3) P VS NP FRAMEWORK
+
+We formalize the difficulty using computational complexity theory.
+
+Class P:
+
+    Problems solvable in polynomial time.
+    That is, time bounded by n^k for some fixed k.
+
+These are considered "efficiently solvable."
+
+Class NP:
+
+    Problems whose solutions can be verified
+    in polynomial time.
+
+For the housing problem:
+
+    If someone gives you a list of 100 students,
+    you can check in polynomial time that
+    no incompatible pair appears.
+
+Therefore:
+
+    INDEPENDENT SET ∈ NP.
+
+------------------------------------------------------------
+
+4) NP-COMPLETE PROBLEMS
+
+A problem is NP-complete if:
+
+    (1) It is in NP.
+    (2) Every problem in NP can be reduced to it
+        in polynomial time.
+
+Independent Set is NP-complete.
+
+This means:
+
+    If Independent Set has a polynomial-time solution,
+    then every NP problem does.
+
+------------------------------------------------------------
+
+5) THE CORE QUESTION
+
+The P vs NP problem asks:
+
+    Is P = NP ?
+
+That is:
+
+    Is every efficiently verifiable problem
+    also efficiently solvable?
+
+Two possibilities:
+
+Case 1: P = NP
+    Every NP problem has a polynomial-time algorithm.
+    Efficient solution methods exist.
+
+Case 2: P ≠ NP
+    Some problems can be verified quickly
+    but cannot be solved quickly.
+
+Most computer scientists believe:
+
+    P ≠ NP
+
+But no proof exists.
+
+------------------------------------------------------------
+
+6) COOK–LEVIN THEOREM (1971)
+
+Stephen Cook and Leonid Levin proved:
+
+    The Boolean satisfiability problem (SAT)
+    is NP-complete.
+
+This was the first NP-completeness result.
+
+It implies:
+
+    Thousands of problems (including Independent Set)
+    are computationally equivalent in difficulty.
+
+------------------------------------------------------------
+
+7) WHY THIS MATTERS
+
+If P = NP:
+
+    - Cryptography would collapse.
+    - Many optimization problems become easy.
+    - Automated theorem proving becomes efficient.
+
+If P ≠ NP:
+
+    - There are inherent limits to computation.
+    - Some problems are fundamentally intractable.
+
+------------------------------------------------------------
+
+8) CURRENT STATUS
+
+P vs NP is one of the Millennium Prize Problems.
+
+No proof is known.
+
+Thus, we do not know whether problems like the housing
+selection problem are genuinely hard in principle,
+or whether a brilliant algorithm remains undiscovered.
+
+That is the central unresolved question.

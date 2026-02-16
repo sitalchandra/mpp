@@ -1,0 +1,179 @@
+DETAILED MATHEMATICAL EXPLANATION
+
+1) WHAT ARE THE NAVIER–STOKES EQUATIONS?
+
+The Navier–Stokes equations describe the motion of viscous fluids
+(liquids and gases).
+
+They express Newton’s second law applied to a fluid element:
+
+    Force = mass × acceleration
+
+Unknowns:
+
+    u(x,t)  = velocity field (vector field)
+    p(x,t)  = pressure
+    ρ       = density
+    ν       = viscosity
+
+For an incompressible fluid (constant density), the equations are:
+
+    ∂u/∂t + (u · ∇)u = −∇p + νΔu
+    ∇ · u = 0
+
+The first equation represents conservation of momentum.
+The second equation represents incompressibility.
+
+------------------------------------------------------------
+
+2) MEANING OF EACH TERM
+
+(a) ∂u/∂t
+    Time change of velocity.
+
+(b) (u · ∇)u
+    Nonlinear convection term.
+    Represents transport of momentum by the fluid itself.
+    This term causes turbulence and mathematical difficulty.
+
+(c) −∇p
+    Force due to pressure differences.
+
+(d) νΔu
+    Viscous diffusion term.
+    Smooths out irregularities in the velocity.
+
+(e) ∇ · u = 0
+    No compression: volume is preserved.
+
+------------------------------------------------------------
+
+3) WHY THEY MODEL WAVES AND TURBULENCE
+
+Boat wakes, air turbulence behind jets, ocean currents,
+and atmospheric circulation are governed by these equations.
+
+The equations predict:
+
+    - Laminar flow (smooth motion)
+    - Turbulent flow (chaotic motion)
+    - Vortex formation
+    - Energy dissipation
+
+The difficulty lies in the nonlinear term (u · ∇)u.
+
+------------------------------------------------------------
+
+4) THE MATHEMATICAL PROBLEM
+
+We want to answer:
+
+    Given smooth initial velocity u0(x),
+    does a smooth solution exist for all time?
+
+More precisely:
+
+    If u0 is smooth and divergence-free,
+    does there exist a unique smooth solution u(x,t)
+    defined for all t ≥ 0?
+
+------------------------------------------------------------
+
+5) LOCAL VS GLOBAL EXISTENCE
+
+Local existence:
+    Smooth solutions exist for small time.
+    (This is known and proven.)
+
+Global existence:
+    Do solutions remain smooth for all time?
+
+This is unknown in three dimensions.
+
+------------------------------------------------------------
+
+6) POSSIBLE FAILURE: BLOW-UP
+
+A solution "blows up" if:
+
+    ||u(x,t)|| becomes infinite
+    in finite time.
+
+This would mean formation of a singularity.
+
+The key open question:
+
+    Can singularities form from smooth initial data?
+
+In 2 dimensions:
+    Global smooth solutions are known to exist.
+
+In 3 dimensions:
+    The problem is open.
+
+------------------------------------------------------------
+
+7) ENERGY ESTIMATE
+
+Multiply the equation by u and integrate over space.
+
+One obtains:
+
+    d/dt ∫ |u|^2 dx = − 2ν ∫ |∇u|^2 dx
+
+This shows:
+
+    Total kinetic energy decreases over time.
+
+However, this estimate alone does not prevent
+possible singularities in 3D.
+
+------------------------------------------------------------
+
+8) THE MILLENNIUM PROBLEM
+
+The challenge is to prove one of the following:
+
+    (A) For every smooth initial condition in R^3,
+        there exists a unique global smooth solution.
+
+or
+
+    (B) There exists smooth initial data that leads
+        to finite-time blow-up.
+
+This is one of the seven Millennium Prize Problems.
+
+------------------------------------------------------------
+
+9) WHY IT IS SO DIFFICULT
+
+The main obstruction is the nonlinear term:
+
+    (u · ∇)u
+
+It transfers energy between scales.
+
+In three dimensions, vortex stretching can amplify
+velocity gradients.
+
+This creates the possibility of singularities.
+
+There is no known method that controls this effect
+for all time.
+
+------------------------------------------------------------
+
+10) WHAT PROGRESS WOULD MEAN
+
+A full mathematical theory would:
+
+    - Explain turbulence formation
+    - Clarify energy cascade mechanisms
+    - Establish precise regularity criteria
+    - Provide rigorous global existence or blow-up results
+
+Despite being written in the 19th century,
+a complete 3D theory remains unknown.
+
+That is the central mathematical challenge.
